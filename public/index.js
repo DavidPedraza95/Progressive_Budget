@@ -7,7 +7,7 @@ fetch("/api/transaction")
   })
   .then(data => {
     // save db data on global variable
-    if(typeof data === 'Array') {transactions = data;
+    if(Array.isArray(data)) {transactions = data;
 
     populateTotal();
     populateTable();
